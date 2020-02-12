@@ -1,0 +1,18 @@
+﻿làm service
+trong thực tế k ghi httppost vs send trong component như v hết mà phải code nó dưới dạng model và cho nó một file service riêng
+tách riêng ra service rồi trong com gọi service thôi
+b0:app->service folder=>chia ra nhiều folser con
+b1:gọi thư viện,tạo service,export
+import {Injectable} from '@angular/core'//chich dlieu tu day vo component
+
+b2: gọi thằng service trong thằng cần sử dụng nó chứ k có để trong module tổng
+//@ts-check
+@Injectable()
+//export
+export class SanPhamService{
+
+}
+service chỉ đảm nhiệm nhiệm vụ post ra ngoài th. subcribe thì nằm bên com
+b3:com muốn xài thì gọi nó ra xong tạo đối tượng .tới nó
+
+b4:trong com(@component) nhớ thêm thằng Provider vô, nó là một mảng service

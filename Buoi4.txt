@@ -1,0 +1,29 @@
+﻿Buổi 4
+1 way biding: Dữ liệu là gán bên angular, nên khi click cái là angular thay đổi chứ k phải khang thay đổi
+
+2 way biding:
+
+lưu ý: cách ghi các sự kiện bên angular 
+vd:onClick(js)=>ang:bỏ on và tên hoa thành thường=>(click)
+
+
+tạo cầu nối giữa client để mọi object bên client trả về angular qua $event
+vd:
+ràng buộc từ ang lên khách:{{}}:<h1>Giá trị Update:{{hoten}}</h1><!--từ angular thay đổi lên khách hàng-->
+
+ràng buộc từ khách lên angular:
+<input type="text" value="{{hoten}}" (keyup)="gochu($event)"/>
+  gochu(e){
+    console.log(e);
+    this.hoten=e.target.value//từ khách hàng trả giá trị về angular
+  }
+
+
+=>nhược điểm: cứ tạo một from mới là phải ghi một hàm nữa , một biến mới nữa
+
+
+
+ngModel(thư viện formsmodule):  nhwunxg gì khàng gõ trên form đều do thằng này ràng buộc hết
+không cần ràng buộc dlieu giữa angular->kh và kh->angular 
+properties:[]
+ngoặc tròn: ràng buộc trên angular	

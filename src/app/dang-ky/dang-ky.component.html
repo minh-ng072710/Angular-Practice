@@ -1,0 +1,29 @@
+<h1>Giá trị Update:{{hoten}}</h1><!--từ angular thay đổi lên khách hàng-->
+<input type="text" value="{{hoten}}" (keyup)="gochu($event)"/>
+
+
+<!--Dùng ngMOdel-->
+<h1>Giá trị Update ngModel:{{namsinh}}</h1>
+<input type="text" [(ngModel)]='namsinh'/><!--Dùng ngMOdel: không cần value luôn-->
+
+<hr>
+<form (submit)="xuly(formDangNhap)" #formDangNhap='ngForm'><!--Đặt Tên Cho Form:FormDangNhap để gọi vào hàm xử lí,giống $event nhưng form phải làm khác-->
+
+    <div>
+        <label for="username">Username:</label><br>
+        <input type="text" ngModel name="Username" id="username"> <!--name của ngModel là để cho server bên angular hiểu nó là cái nào: name là một mã html
+        =>không cần gọi giá trị biến
+        =>không cần gọi sự kiện
+        =>muốn mọi đối tượng trong form cho nó hiểu đc trong ngForm thì phải đặt tên
+        -->
+
+    </div>
+  <div>
+    <label for="username">Pass:</label><br>
+
+    <input type="password" name="" id="password" ngModel name="Password">
+
+  </div>
+  
+    <input type="submit" value="Login">
+</form>

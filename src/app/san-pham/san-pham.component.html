@@ -1,0 +1,21 @@
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+</style>
+<H1 style="text-align: center;">BÀI HÔM TRƯỚC</H1>
+<table>
+    <tr>
+        <th>Tên Sản Phẩm</th>
+        <th>Số Lượng</th>
+       
+      </tr>
+      <tr *ngFor="let pro of GioHang">
+        <th>
+            {{pro.Ten}}
+        </th>
+        <th>
+            {{pro.SoLuong}}
+        </th>
+      </tr>
+</table>

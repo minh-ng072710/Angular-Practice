@@ -1,0 +1,7 @@
+﻿Tổng hợp angular: 
+Local Storage:(lưu dưới máy người dùng)
+=>aligator.io/medium.com
+session storage:lưu trư theo phiên, tắt máy là hết
+local storge:lưu trong ổ cứng tắt mở lên vẫn còn
+
+f12:=>application=> local storage	

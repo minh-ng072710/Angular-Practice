@@ -1,0 +1,44 @@
+﻿Route
+1/mỗi một route sẽ cấu hình vs một com
+2/ rất nhiều màn hình hiện ra nhưng bản chất nó vẫn đứng yên ở một trang 
+
+
+=>các bước cấu hình route
+http://localhost:4200/ =>home: những trường hợp / lạ thì nó sẽ hiển thị cái này
+http://localhost:4200/a =>com a
+http://localhost:4200/b =>com b
+
+
+trong app component sẽ cấu hình thẻ vs route các thứ
+router oulet: tag mẹ=> chỉ hiển thị duy nhất route nào được người dùng gọi vs route tuwog ứng hiển thị một trong các com tuwomg ứng
+
+b1:tạo com A,B,Home, không khai báo nó trong app module nữa
+b2: khai báo routing:(app-routing.module.ts)module
+1/tạo file routing// nó là một module nha 
+b1:import ngModule
+2/đổ com vào routing
+3/đổ routing vào app module
+b3:gọi router outlet
+
+
+tai sao export routermodule
+
+để cho bên app module hiểu nó là route để nhwof từ đó trong html mới gọi đc tag  router outlet
+
+thằng Routes chỉ quản lý cái mảng mà trong đó chứa mấy cấu hình để import vô bên app.module.ts thôi
+
+từ h không được đụng vô router outlet nữa nha ba
+
+
+
+II/cách chuyển route:
+href : tải lại trang, vì bản chất của ang là single page => k load lại trang=> sai nguyên tắc
+và
+ routerlink: không tải lại trang=> tự đông routerlink sẽ ràng buộc để ang tự động bắt và chuyển trang mà k load lại trang 
+di chuyển giữa các route
+
+
+còn có cách chuyển lại trang khác bằng code
+
+
+single page:chỉ thay đổi cái cần thay đổi th k đụng tới mấy cái khác

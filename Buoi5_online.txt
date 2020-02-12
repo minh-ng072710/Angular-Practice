@@ -1,0 +1,26 @@
+﻿Buổi 5:
+Service
+Làm sao đứng từng angular  mà bắt được dữ liệu mà nodejs trả về?
+=> 
+Khi nào cần dùng ngOninit
+b1:đứng từ com có hàm sendget ra ngoài=> import thư viện bên chính trang đó, vì nếu để bên app.module tổng thì tất cả các hàm khác đều bị anh hưởng
+b2:luôn import :  
+import {HttpClientModule} from'@angular/common/http'
+vô module tổng
+
+    this.http.get().subscribe//cho get chạy và chờ get chạy xong lấy kq về thì subcribe ruột nó mối chạy, chờ nodejs trả về thì nó mơi chạy, trong subcribe có một biến đại diện cho data nodejs trả về
+lỗi 3000 k cho angular 4200 nả vô để lấy dữ liệu(tức là chỉ những thằng server nào mà cho phép nó nả vô thì mới vô đc=> khai báo server của angular vô) 
+=>solution:github
+(link:https://github.com/khoaphp/AngServices)
+
+
+
+Kết Luận: Cứ nhắc tới Service là làm 2 cái
+cái 1: import bên com nào cần lấy dữ liệu thư viện get post 
+cái 2: import module tổng HttpClientModule
+
+hiển thị dữ liệu k thì k nói 
+mà khi lấy data về thì lấy data trong constructor để có dlieu trc => onnit chạy nó có dữ liệu và dữ liệu sẽ k bị lỗi
+component:provider: thằng chứa service:khi 1sự kiện trong com mà các hàm dùng tới service k gọi trực tiếp trong com mà phải viết riêng=> model
+module
+serrvice:

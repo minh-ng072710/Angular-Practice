@@ -1,0 +1,16 @@
+<h1 >Servivce angular</h1>
+<p>DEMO SERVER</p>
+<h2>Tổng:{{tong}}</h2>
+<button (click)="sendGet()">Get</button>
+<form (submit)="xuly(formDemo)" #formDemo="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Số 1</label>
+      <input type="text"  class="form-control" ngModel name="txtSo1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Số 2</label>
+        <input type="text"  class="form-control" ngModel name="txtSo2" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
